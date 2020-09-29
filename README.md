@@ -6,7 +6,6 @@ The F1-scores of those baseline models are in range of 0.83-0.90. you could fine
 Step 1:
 	downloading datasets. The datasets from Tianchi competition includes dataset A and dataset B. The dataset A consists of 24106 ECGs, of which each has 8 leading records(I，II，V1，V2，V3，V4，V5, V6). while the dataset B consists of 20036 ECGs. Dataset can be downloaded from website. 
 	https://pan.baidu.com/s/1fmCuV5i9oifnUNOsFhV0sA  pwd: 8hs2 
-	or
 	https://drive.google.com/file/d/1jIOTnOwk4zNA4zGUA_8k7XSKo0dCi10I/view?usp=sharing
 	
 	
