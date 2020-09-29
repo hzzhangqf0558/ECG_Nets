@@ -1,0 +1,30 @@
+# data
+dir_root: './all_data/'
+data_root: './all_data/hf_round2_train'
+arrythmia_path: './all_data/hf_round2_arrythmia.txt'
+validation_csv_path: './all_data/hf_round2_label_validation.csv'
+test_root: './all_data/testB_noDup_rename'
+test_label: './all_data/hf_round1_subB_noDup_rename.txt'
+train_len: 16000
+data_lens: 5000
+num_classes: 34
+
+# ensemble
+batch_size: 32 #512
+num_workers: 2
+flip: False
+model_name:
+    #- 'ResNeXt50_2x64d'
+    - 'ResNet50'
+    #- 'ResNet50_Basic'
+    - 'ResNet50'
+    #- 'ResNet101_Basic'
+model_path:
+    - './all_data/checkpoints/ResNet50_train/ResNet50.ckpt'
+    - './all_data/checkpoints/ResNet50_train/ResNet50.ckpt'
+model_weight:
+    #- 89.04
+    - 91.99
+      #- 91.66
+    - 91.99
+      #- 91.60

@@ -1,0 +1,52 @@
+# data
+dir_root: './all_data/'
+#round 2
+data_root: './all_data/hf_round2_train'
+arrythmia_path: './all_data/hf_round2_arrythmia.txt'
+train_txt_path: './all_data/hf_round2_train.txt'
+train_csv_path: './all_data/hf_round2_label_train.csv'
+validation_csv_path: './all_data/hf_round2_label_validation.csv'
+
+
+
+#round 1
+
+#data_root: './all_data/train'
+#arrythmia_path: './all_data/hf_round1_arrythmia.txt'
+#train_txt_path: './all_data/hf_round1_label.txt'
+#train_csv_path: './all_data/hf_round1_label_train.csv'
+#validation_csv_path: './all_data/hf_round1_label_validation.csv'
+
+
+
+#test --no match
+test_root: './all_data/testA'
+test_label: './all_data/hf_round1_subA.txt'
+data_lens: 5000   #1x5000
+
+train_len: 16000    #round 2
+num_classes: 34   # round 2
+
+#train_len: 19200  #round 1
+#num_classes: 55   #round 1
+
+# training
+model: 'SE_ResNeXt50_4x64d'
+epochs: 48
+batch_size: 64
+num_workers: 8
+model_save_path: './all_data/checkpoints/SE_ResNeXt50_4x64d_train_val/'
+loss: 'binary_crossentropy'
+fast_train: False
+
+# testing
+load_model_path: '' #'./user_data/checkpoints/SE_ResNeXt50_4x64d_train/SE_ResNeXt50_4x64d.ckpt'
+flip: False
+
+# optimizer
+lr_mode : cosine
+base_lr: 0.0006
+warmup_epochs: 6
+warmup_lr: 0.0
+targetlr : 0.0
+weight_decay: 0.00002
